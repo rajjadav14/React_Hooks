@@ -1,0 +1,16 @@
+body {
+  background-color: #282c34;
+  color: white;
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
+}
+.mytext{
+    font-size: 50px;
+    margin: 50px;
+}
+button {
+  width: 200px;
+  height: 100px;
+  font-size: 90px;
+}
