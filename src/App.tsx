@@ -11,41 +11,18 @@ import RenderProps from "./Components/RenderProps";
 import CustomHooks from "./Components/CustomHooks";
 import Portals from "./Components/Portals/Portal";
 import { useEffect, useState } from "react";
+import Timer from "./Components/timer/timer";
+import FunctionTransition from "./Components/useTransition/FunctionTransition";
+import ClassTrans from "./Components/useTransition/ClassTrans";
+import DefferHook from "./Components/useDefferedValue/Parent";
+import ATM from "./Components/ATM";
+import Folder from "./Components/FolderQuestion";
+import Menu from "./Components/Menu";
 
 function App() {
-  const [isActive, setIsActive] = useState(false);
-  const [isPaused, setIsPaused] = useState(true);
-  const [time, setTime] = useState(0);
-
-  useEffect(() => {
-    let interval: any = null;
-
-    if (isActive && isPaused === false) {
-      interval = setInterval(() => {
-        setTime((time) => time + 1);
-      }, 1000);
-    } else {
-      clearInterval(interval);
-    }
-    return () => {
-      clearInterval(interval);
-    };
-  }, [isActive, isPaused]);
-
-  const handleStart = () => {
-    setIsActive(true);
-    setIsPaused(false);
-  };
-
-  const handlePauseResume = () => {
-    setIsPaused(!isPaused);
-  };
   return (
     <div className="App">
-      <h1>Hello Timer</h1>
-      {time}
-      <button onClick={handleStart}>Start</button>
-      <button onClick={handlePauseResume}>Stop</button>
+      <Folder />
     </div>
   );
 }

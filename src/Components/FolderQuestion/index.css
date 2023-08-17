@@ -1,0 +1,42 @@
+.mainContainer {
+    font-size: 25px;
+    width: 400px;
+
+}
+
+.folder {
+    width: 200px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    background-color: darkgreen;
+    color: black;
+}
+
+.iconFolder {
+    margin-right: 15px;
+}
+
+.file {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    margin-left: 20px;
+    background-color: wheat;
+    color: black;
+}
+
+.items {
+    margin-left: 20px;
+    width: 100%;
+    display: block;
+}
+
+.addIcons {
+    float: right;
+}
+
+.icons {
+    margin: 2px;
+}
